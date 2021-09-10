@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.catnip.loginpageexample.R
 import com.catnip.loginpageexample.data.preference.UserPreference
-import com.catnip.loginpageexample.databinding.ActivityHomeBinding
 import com.catnip.loginpageexample.databinding.ActivityMainBinding
 import com.catnip.loginpageexample.ui.homepage.HomeActivity
 import com.catnip.loginpageexample.utils.Constans
@@ -50,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
     private fun isFormLoginValid(): Boolean {
         val username = binding.etUsername.text.toString()
         val password = binding.etPassword.text.toString()
-        val isFormValid = true
+        var isFormValid = true
 
         if (username.isEmpty()) {
             isFormValid = false
@@ -66,6 +65,7 @@ class LoginActivity : AppCompatActivity() {
         } else {
             binding.tilPassword.isErrorEnabled = false
         }
+        return isFormValid
     }
 
     private fun checkLogin() {

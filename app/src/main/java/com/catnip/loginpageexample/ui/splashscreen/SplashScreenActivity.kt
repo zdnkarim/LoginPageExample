@@ -8,11 +8,12 @@ import com.catnip.loginpageexample.R
 import com.catnip.loginpageexample.data.preference.UserPreference
 import com.catnip.loginpageexample.ui.homepage.HomeActivity
 
-class SplahScreenActivity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     private var timer: CountDownTimer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splah_screen)
+        setContentView(R.layout.activity_splash_screen)
+        setSplashTimer()
         supportActionBar?.hide()
 
     }
@@ -24,12 +25,12 @@ class SplahScreenActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                if (UserPreference(this@SplahScreenActivity).isUserLoggedIn) {
-                    val intent = Intent(this@SplahScreenActivity, HomeActivity::class.java)
+                if (UserPreference(this@SplashScreenActivity).isUserLoggedIn) {
+                    val intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 } else {
-                    val intent = Intent(this@SplahScreenActivity, HomeActivity::class.java)
+                    val intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 }
