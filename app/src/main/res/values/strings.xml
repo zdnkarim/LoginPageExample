@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginPageExample</string>
+    <string name="text_hint_username">Username</string>
+    <string name="text_hint_password">Password</string>
+    <string name="text_button_login_account">LOGIN</string>
+    <string name="text_placeholder_btn_gmail">Login with Gmail</string>
+    <string name="text_placeholder_btn_fb">Login with Facebook</string>
+    <string name="text_error_username_empty">Username is not Valid!</string>
+    <string name="text_error_password_empty">Password is not Valid!</string>
+    <string name="text_toast_login_fb_success">Login Facebook Success</string>
+    <string name="text_toast_login_gmail_success">Login Gmail Success</string>
+</resources>
