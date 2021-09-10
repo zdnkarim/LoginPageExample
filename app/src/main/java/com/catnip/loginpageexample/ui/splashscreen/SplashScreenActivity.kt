@@ -7,6 +7,7 @@ import android.os.CountDownTimer
 import com.catnip.loginpageexample.R
 import com.catnip.loginpageexample.data.preference.UserPreference
 import com.catnip.loginpageexample.ui.homepage.HomeActivity
+import com.catnip.loginpageexample.ui.login.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     private var timer: CountDownTimer? = null
@@ -30,7 +31,7 @@ class SplashScreenActivity : AppCompatActivity() {
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 } else {
-                    val intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
+                    val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                 }
