@@ -21,13 +21,13 @@ class LoginActivity : AppCompatActivity() {
         setOnClickListener()
     }
 
-    private fun setOnClickListener(){
-        binding.btnLoginAccount.setOnClickListener{
-            if(isFormLoginValid()){
+    private fun setOnClickListener() {
+        binding.btnLoginAccount.setOnClickListener {
+            if (isFormLoginValid()) {
                 checkLogin()
             }
         }
-        binding.llActionSsoFb.setOnClickListener{
+        binding.llActionSsoFb.setOnClickListener {
             FancyToast.makeText(
                 this,
                 getString(R.string.text_toast_login_fb_success),
@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
                 true
             ).show()
         }
-        binding.llActionSsoGmail.setOnClickListener{
+        binding.llActionSsoGmail.setOnClickListener {
             FancyToast.makeText(
                 this,
                 getString(R.string.text_toast_login_gmail_success),
@@ -46,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
             ).show()
         }
     }
+
     private fun isFormLoginValid(): Boolean {
         val username = binding.etUsername.text.toString()
         val password = binding.etPassword.text.toString()
@@ -78,7 +79,7 @@ class LoginActivity : AppCompatActivity() {
                 FancyToast.LENGTH_LONG,
                 FancyToast.SUCCESS,
                 true
-            )
+            ).show()
             saveLoginData()
             navigateToHomePage()
         } else {
@@ -88,7 +89,7 @@ class LoginActivity : AppCompatActivity() {
                 FancyToast.LENGTH_LONG,
                 FancyToast.ERROR,
                 true
-            )
+            ).show()
         }
 
     }
