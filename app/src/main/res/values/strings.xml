@@ -9,4 +9,8 @@
     <string name="text_error_password_empty">Password is not Valid!</string>
     <string name="text_toast_login_fb_success">Login Facebook Success</string>
     <string name="text_toast_login_gmail_success">Login Gmail Success</string>
+    <string name="text_actionbar_homepage">HomePage</string>
+    <string name="text_toast_logout_success">Logout Success</string>
+    <string name="text_toast_login_error">Login Error</string>
+    <string name="text_toast_login_success">Login Success</string>
 </resources>

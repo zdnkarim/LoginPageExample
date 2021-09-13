@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         if (username == Constans.DUMMY_USERNAME && password == Constans.DUMMY_PASSWORD) {
             FancyToast.makeText(
                 this,
-                "Login Success",
+                getString(R.string.text_toast_login_success),
                 FancyToast.LENGTH_LONG,
                 FancyToast.SUCCESS,
                 true
@@ -85,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
         } else {
             FancyToast.makeText(
                 this,
-                "Login Error",
+                getString(R.string.text_toast_login_error),
                 FancyToast.LENGTH_LONG,
                 FancyToast.ERROR,
                 true
