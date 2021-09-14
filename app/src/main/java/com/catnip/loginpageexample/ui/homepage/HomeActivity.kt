@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.annotation.SuppressLint
 import com.catnip.loginpageexample.R
 import com.catnip.loginpageexample.data.preference.UserPreference
 import com.catnip.loginpageexample.databinding.ActivityHomeBinding
@@ -19,13 +20,14 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_home)
+        setContentView(binding.root)
 
         supportActionBar?.title = getString(R.string.text_actionbar_homepage)
 
         setupWebView()
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
         binding.wvPage.settings.javaScriptEnabled = true
         binding.wvPage.settings.allowContentAccess = true
